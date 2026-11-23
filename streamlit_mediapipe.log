@@ -1,0 +1,26 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://192.168.29.110:8502
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1792555436.477686    9872 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792555436.510235    9872 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792555444.186793   25720 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+2026-10-21 09:38:44.180 MediaFileHandler: Missing file 5965901e8eed6369a04730ce5b8f7feca65f0e81498095bc9fd2a6d8.jpg
+2026-10-21 09:41:01.329 MediaFileHandler: Missing file e3188f383ce8944ee7be8e42d4131d449d15dfa94a0f2b1e2fc9552d.jpg
+  Stopping...
+2026-10-21 09:41:11.194 Uncaught exception GET /_stcore/stream (::1)
+HTTPServerRequest(protocol='http', host='localhost:8502', method='GET', uri='/_stcore/stream', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "C:\gesture_controlled_interface\.venv\Lib\site-packages\tornado\websocket.py", line 965, in _accept_connection
+    open_result = handler.open(*handler.open_args, **handler.open_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\gesture_controlled_interface\.venv\Lib\site-packages\streamlit\web\server\browser_websocket_handler.py", line 126, in open
+    self._session_id = self._runtime.connect_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\gesture_controlled_interface\.venv\Lib\site-packages\streamlit\runtime\runtime.py", line 382, in connect_session
+    raise RuntimeStoppedError(f"Can't connect_session (state={self._state})")
+streamlit.runtime.runtime.RuntimeStoppedError: Can't connect_session (state=RuntimeState.STOPPING)
